@@ -1,1 +1,1 @@
-# Variant-calling_germline
+# Variant-calling_germline_workflow
