@@ -2,6 +2,7 @@
  # Author:Tina Yang
  # Date: Mar 2,2021
  # STAR 2-pass mapping script for PE
+ # STAR v2.7.8a
  
  # Reference: GENCODE mm10
  # Steps:
