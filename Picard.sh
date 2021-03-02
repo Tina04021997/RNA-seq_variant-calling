@@ -1,7 +1,7 @@
 #!/bin/bash                                                                                     
 # Author:Tina Yang                                                                                
 # Date: Mar 2,2021                                                                                
-# Picrad mark duplicates                                                                          
+# Picard mark duplicates                                                                          
 # Picard v2.23.4                                                                                 
 
 picard MarkDuplicates \                                                                            
