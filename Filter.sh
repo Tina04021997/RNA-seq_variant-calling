@@ -45,13 +45,7 @@ gatk VariantFiltration \
       --filter-name "ReadPosRankSum-20" \
       --filter-expression "ReadPosRankSum < -20.0" \
       -O $DATA_PATH/FilteredVariant_indel.vcf.gz
- 
- 
-#Combine filtered SNP and INDEL vcfs
-#While concat, need to -a (allow overlaps to avoid chr contiguous problem)
-#tabix $DATA_PATH/FilteredVariant_SNP.vcf.gz
-#tabix $DATA_PATH/FilteredVariant_indel.vcf.gz
-#bcftools concat -a  $DATA_PATH/FilteredVariant_SNP.vcf.gz $DATA_PATH/FilteredVariant_indel.vcf.gz -Oz -o FilteredVariant.vcf.gz
+
 
 #Select variants that pass the filter conditions
 bcftools view -f PASS -Oz $DATA_PATH/FilteredVariant_SNP.vcf.gz -o $DATA_PATH/PassedVariant_SNP.vcf.gz
