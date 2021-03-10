@@ -7,10 +7,23 @@
 # Dataset
 REF_PATH="/LVM_data/tina/0220_variant_calling/mm10"
 DATA_PATH="/LVM_data/tina/0220_variant_calling"
- 
+
+# Seperate data into SNP or INDEL-only dataset with SelectVariants
 # Hard-filtering germline short variants, choosing specific thresholds for one or more annotations
 # Hard-filter SNPs and indels seperatedly due to different thresholds
- 
+
+#Subset to SNPs-only callset 
+gatk SelectVariants \
+    -V $DATA_PATH/RawVariant.vcf.gz \
+    -select-type SNP \
+    -O $DATA_PATH/SNP.vcf.gz
+    
+#Subset to indels-only callset
+gatk SelectVariants \
+    -V $DATA_PATH/RawVariant.vcf.gz \
+    -select-type INDEL \
+    -O $DATA_PATH/INDEL.vcf.gz
+
 #Hard-filter SNPs
 gatk VariantFiltration \
       -R $REF_PATH/GRCm38.primary_assembly.genome.fa \
