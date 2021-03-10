@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author:Tina Yang
-# Date: Mar 5,2021
+# Date: Mar 10,2021
 # Single sample variant calling by GATK VariantFiltration
 # GATK v4.1.9.0
   
@@ -27,7 +27,7 @@ gatk SelectVariants \
 #Hard-filter SNPs
 gatk VariantFiltration \
       -R $REF_PATH/GRCm38.primary_assembly.genome.fa \
-      -V $DATA_PATH/RawVariant.vcf.gz \
+      -V $DATA_PATH/SNP.vcf.gz \
       --filter-name "QD2" \
       --filter-expression "QD < 2.0" \
       --filter-name "QUAL30" \
@@ -48,7 +48,7 @@ gatk VariantFiltration \
 #Hard-filter indels
 gatk VariantFiltration \
       -R $REF_PATH/GRCm38.primary_assembly.genome.fa \
-      -V $DATA_PATH/RawVariant.vcf.gz \
+      -V $DATA_PATH/INDEL.vcf.gz \
       --filter-name "QD2" \
       --filter-expression "QD < 2.0" \
       --filter-name "QUAL30" \
