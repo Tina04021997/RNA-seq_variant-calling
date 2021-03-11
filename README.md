@@ -1,3 +1,3 @@
 # RNA-seq_variant-calling
 ## Pipeline workflow
-![image](https://github.com/Tina04021997/Variant-calling_germline/blob/main/Germline_variant%20calling_single%20sample_workflow.jpg)
+![image](https://github.com/Tina04021997/RNA-seq_variant-calling/blob/main/RNA-seq%20variant%20calling%20workflow.jpg)
