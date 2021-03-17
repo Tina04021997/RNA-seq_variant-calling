@@ -33,3 +33,12 @@ gunzip GRCm38.primary_assembly.genome.fa.gz
 wget -c ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M22/gencode.vM22.annotation.gtf.gz
 gunzip gencode.vM22.annotation.gtf.gz
 ```
+## Notes
+1. Before running SplitNCigarReads.sh, create your fasta index file beforehead:
+   - ```gatk CreateSequenceDictionary -R ref.fasta``` 
+   - ```samtools faidx ref.fasta```
+2. For variant annotation, download the cache file at a new directory before running Annotation.sh:
+   - keep in mind that the cache version should match with your VEP version
+   - ```mkdir .vep```
+   - ```curl -O http://ftp.ensembl.org/pub/release-101/variation/indexed_vep_cache/mus_musculus_vep_101_GRCm38.tar.gz```
+   - ```tar xzf mus_musculus_vep_101_GRCm38.tar.gz```
