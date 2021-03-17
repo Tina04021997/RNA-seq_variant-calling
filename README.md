@@ -14,7 +14,7 @@ This is the workflow for RNA-seq germline variant calling based on [GATK RNAseq 
 -  tsv file transformed from annotated vcf files
 
 ## Reference data 
-mm10 resource bundle see [Create GATK mm10 resource bundle](https://github.com/igordot/genomics/blob/master/workflows/gatk-mouse-mm10.md)
+**mm10 resource bundle** see [Create GATK mm10 resource bundle](https://github.com/igordot/genomics/blob/master/workflows/gatk-mouse-mm10.md)
 
 - If you encounter problems while concatenating dbSNP VCF files, try this:
 ```
@@ -26,4 +26,10 @@ bcftools concat vcf_chr_number.vcf.gz vcf_chr_number.vcf.gz -Oz -o dbSNP.vcf.gz
 ```
 grep "^#" mgp.v5.indels.pass.chr.vcf > indels.vcf && grep -v "^#" mgp.v5.indels.pass.chr.vcf | \sort -V -k1,1 -k2,2n >> indels.vcf
 ```
-
+**GENCODE mm10 fasta (PRI) & GTF files**
+```
+wget -c ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M22/GRCm38.primary_assembly.genome.fa.gz
+gunzip GRCm38.primary_assembly.genome.fa.gz
+wget -c ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M22/gencode.vM22.annotation.gtf.gz
+gunzip gencode.vM22.annotation.gtf.gz
+```
