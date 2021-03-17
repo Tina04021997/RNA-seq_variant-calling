@@ -38,7 +38,10 @@ gunzip gencode.vM22.annotation.gtf.gz
    - ```gatk CreateSequenceDictionary -R ref.fasta``` 
    - ```samtools faidx ref.fasta```
 2. For variant annotation, download the cache file at a new directory before running Annotation.sh:
-   - keep in mind that the cache version should match with your VEP version
+   - keep in mind that the cache version should match with your VEP version,
    - ```mkdir .vep```
    - ```curl -O http://ftp.ensembl.org/pub/release-101/variation/indexed_vep_cache/mus_musculus_vep_101_GRCm38.tar.gz```
    - ```tar xzf mus_musculus_vep_101_GRCm38.tar.gz```
+3. To make your life easier, use VAtools to make the annotated vcf file human-readable:
+   - download VAtools by ```pip install VAtools```
+   - ```vep-annotation-reporter input.vcf vep_fields -o output.tsv```
