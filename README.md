@@ -11,7 +11,8 @@ This is the workflow for RNA-seq germline variant calling based on [GATK RNAseq 
 ## Input data
 - Paired-end fastq files
 - Reference: mm10 resource bundle see [Create GATK mm10 resource bundle](https://github.com/igordot/genomics/blob/master/workflows/gatk-mouse-mm10.md)
-If you encounter problems while concatenating dbSNP vcf files, try this:
+
+  - If you encounter problems while concatenating dbSNP vcf files, try this:
 ```
 bgzip -c vcf_chr_number.vcf > vcf_chr_number.vcf.gz
 tabix  vcf_chr_number.vcf.gz
