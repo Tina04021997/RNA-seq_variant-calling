@@ -11,7 +11,7 @@ This is the workflow for RNA-seq germline variant calling based on [GATK RNAseq 
 ## Input data
 - Paired-end fastq files
 ## Output data
--  tsv file transformed from annotated vcf files
+-  tsv files transformed from annotated vcf files
 
 ## Reference data 
 **mm10 resource bundle** see [Create GATK mm10 resource bundle](https://github.com/igordot/genomics/blob/master/workflows/gatk-mouse-mm10.md).
