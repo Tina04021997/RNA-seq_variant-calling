@@ -10,17 +10,20 @@ This is the workflow for RNA-seq germline variant calling based on [GATK RNAseq 
 - VAtools v4.1.0
 ## Input data
 - Paired-end fastq files
-- Reference: mm10 resource bundle see [Create GATK mm10 resource bundle](https://github.com/igordot/genomics/blob/master/workflows/gatk-mouse-mm10.md)
+## Output data
+-  tsv file transformed from annotated vcf files
 
-  - If you encounter problems while concatenating dbSNP VCF files, try this:
+## Reference data 
+mm10 resource bundle see [Create GATK mm10 resource bundle](https://github.com/igordot/genomics/blob/master/workflows/gatk-mouse-mm10.md)
+
+- If you encounter problems while concatenating dbSNP VCF files, try this:
 ```
 bgzip -c vcf_chr_number.vcf > vcf_chr_number.vcf.gz
 tabix  vcf_chr_number.vcf.gz
 bcftools concat vcf_chr_number.vcf.gz vcf_chr_number.vcf.gz -Oz -o dbSNP.vcf.gz 
 ```
-  - If you encounter problems while sorting MGP indels VCF file, try this:
-  ```
-  grep "^#" mgp.v5.indels.pass.chr.vcf > indels.vcf && grep -v "^#" mgp.v5.indels.pass.chr.vcf | \sort -V -k1,1 -k2,2n >> indels.vcf
-  ```
-## Output data
-- Tsv files (SNP/INDEL) transformed from annotated vcf files
+- If you encounter problems while sorting MGP indels VCF file, try this:
+```
+grep "^#" mgp.v5.indels.pass.chr.vcf > indels.vcf && grep -v "^#" mgp.v5.indels.pass.chr.vcf | \sort -V -k1,1 -k2,2n >> indels.vcf
+```
+
