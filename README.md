@@ -44,4 +44,4 @@ gunzip gencode.vM22.annotation.gtf.gz
    - ```tar xzf mus_musculus_vep_101_GRCm38.tar.gz```
 3. To make your life easier, use VAtools to make the annotated vcf file human-readable:
    - download VAtools by ```pip install VAtools```
-   - ```vep-annotation-reporter input.vcf vep_fields -o output.tsv```
+   - run ```vep-annotation-reporter input.vcf vep_fields -o output.tsv```
