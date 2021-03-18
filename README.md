@@ -45,3 +45,9 @@ gunzip gencode.vM22.annotation.gtf.gz
 3. To make your life easier, use VAtools to make the annotated vcf file human-readable:
    - download VAtools by ```pip install VAtools```
    - run ```vep-annotation-reporter input.vcf vep_fields -o output.tsv```
+
+## References
+- https://yulijia.net/en/howto/bioinformatics/2020/04/09/working-with-VCF-files.html
+- https://www.biostars.org/p/237829/
+- https://asia.ensembl.org/info/docs/tools/vep/vep_formats.html#output
+
