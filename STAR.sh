@@ -5,7 +5,7 @@
  # STAR v2.7.8a
  
  # Reference: GENCODE mm10
- # Steps:
+ # Steps (based on Rajesh Detroja's lines on rna-star@googlegroups.com):
      #1. Indexing genome with annotations
      #2. 1-pass mapping with indexed genome
      #3. Indexing genome with annotations and SJ.out.tab files
