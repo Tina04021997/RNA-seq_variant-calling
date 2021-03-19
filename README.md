@@ -47,6 +47,7 @@ gunzip gencode.vM22.annotation.gtf.gz
    - run ```vep-annotation-reporter input.vcf vep_fields -o output.tsv```
 
 ## References
+- https://groups.google.com/g/rna-star/c/Cpsf-_rLK9I
 - https://yulijia.net/en/howto/bioinformatics/2020/04/09/working-with-VCF-files.html
 - https://www.biostars.org/p/237829/
 - https://asia.ensembl.org/info/docs/tools/vep/vep_formats.html#output
