@@ -1,5 +1,6 @@
 ## PrepareHTS and Running ASCAT for all samples ##
-
+R version 4.2.2
+ASCAT 3.2.0
 args <- commandArgs(trailingOnly = TRUE)
 sample <- args[1]
 gender <- args[2]
