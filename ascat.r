@@ -1,6 +1,10 @@
 ## PrepareHTS and Running ASCAT for all samples ##
 R version 4.2.2
 ASCAT 3.2.0
+
+Add rho_manual = xxx, psi_manual = xxx when running ascat.runAscat (e.g., ascat.runAscat(ascat.bc, img.prefix = "first",gamma=GAMMA, rho_manual = 0.95, psi_manual = 1.9))
+Where rho is purity and psi is ploidy
+
 args <- commandArgs(trailingOnly = TRUE)
 sample <- args[1]
 gender <- args[2]
